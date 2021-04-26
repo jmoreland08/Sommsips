@@ -1,7 +1,7 @@
 
 
 
- **Sommsips**: Through the use of this app users will have the ability to save tasting notes on on specific wines that they have tasted to the database. They will be able to add picures of the label to the database as well. In addition to saving their own tasting notes to the database so that they can review them later they will be able to update their own current notes, and delete thier notes. All of this information will be rendered via the front end on specific pages depending on what functionality they are trying to us at the moment. The app will access this database via user, wine, and tasting notes  rails tables. The app will be styled using flexbox and grid .
+ **Sommsips**: Through the use of this app users will have the ability to save tasting notes on on specific wines that they have tasted to the database. They will be able to add picures of the label to the database as well. In addition to saving their own tasting notes to the database so that they can review them later they will be able to update and delete thier own notes. All of this information will be rendered via the front end on specific pages depending on what functionality they are trying to use at the moment. The app will access this database via user, wine, and tasting notes rails tables. The app will be styled using flexbox and grid  along with using bootstrap for certain components(carousel, hamburger menu).
 
 
 <br>
@@ -118,9 +118,9 @@ app/
                   |__ WineDetails/
                         |__ WineDetails.jsx
                         |__ WineDetails.css
-                  |__ AddWine/
-                        |__ AddWine.jsx
-                        |__ AddWine.css
+                  |__ CreateWine/
+                        |__ CreateWine.jsx
+                        |__ CreateWine.css
                   |__ EditWine/
                         |__ EditWine.jsx
                         |__ EditWine.css
