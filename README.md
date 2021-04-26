@@ -96,8 +96,12 @@
 
 ``` structure
 
-client/
-|__ src/
+app/
+|__ app.js
+ |__ client/
+  |__ src/
+      |__ containers/
+                   |__ MainContainer.jsx/
       |__ components/ 
                   |__ Home/
                         |__ Home.jsx
@@ -143,6 +147,12 @@ client/
       |__ tasting_notes.rb
 config/
 |__ routes/
+|__ services/
+      |__ api_helper.js
+      |__ auth.js
+      |__ wines.js
+      |__ tasting_notes.js
+      |__ users.js
 db/
 |__ migrate/
 |__ schema.rb
