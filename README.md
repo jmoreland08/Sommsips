@@ -194,10 +194,10 @@ db/
 
 ## Post-MVP
 
-> Use a external api to render more information 
-> Set up search fuctionality
-> Hamburger menu for mobile
-> Use Authentication 
+- _Use a external api to render more information_
+- _Set up search fuctionality_
+- _Hamburger menu for mobile_
+- _Use Authentication_ 
 
 ***
 
