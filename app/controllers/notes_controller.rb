@@ -4,11 +4,11 @@ class NotesController < ApplicationController
   # GET /notes
   def index
     if params[:user_id]
-
+      @user = User.find(params[:user_id])
   
     render json: @user, include: :notes
     else
-      @notes = Note.all
+      @wines = Note.all
   
       render json: @notes
     end
