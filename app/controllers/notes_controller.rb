@@ -3,9 +3,15 @@ class NotesController < ApplicationController
 
   # GET /notes
   def index
-    @notes = Note.all
+    if params[:user_id]
 
-    render json: @notes
+  
+    render json: @user, include: :notes
+    else
+      @notes = Note.all
+  
+      render json: @notes
+    end
   end
 
   # GET /notes/1
