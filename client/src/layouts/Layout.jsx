@@ -7,9 +7,17 @@ export default function Layout() {
       <NavLink className="logo" to="/">
         Sommsips
       </NavLink>
-
+<br/>
       <NavLink className="wines" to="/wines">
         View all Wines
+      </NavLink>
+      <br/>
+      <NavLink className="wines" to="/wines/add-wine">
+        Add a Wine
+      </NavLink>
+      <br/>
+      <NavLink className="wines" to="/wines/edit">
+       edit Wines
       </NavLink>
 
     

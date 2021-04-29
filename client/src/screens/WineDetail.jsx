@@ -3,16 +3,16 @@ import { Link, useParams } from 'react-router-dom';
 import Layout from '../layouts/Layout';
 
 export default function WineDetail(props) {
-  const [wine, setWine] = useState(null);
-  const { allWines} = props;
-  const { id } = useParams();
+  // const [wine, setWine] = useState(null);
+  // const { allWines} = props;
+  // const { id } = useParams();
 
-  useEffect(() => {
-    if (allWines.length) {
-      const oneWine = allWines.find((wine) => wine.id === Number(id));
-      setWine(oneWine)
-    }
-  }, [allWines, id])
+  // useEffect(() => {
+  //   if (allWines.length) {
+  //     const oneWine = allWines.find((wine) => wine.id === Number(id));
+  //     setWine(oneWine)
+  //   }
+  // }, [allWines, id])
 
   return (
     
