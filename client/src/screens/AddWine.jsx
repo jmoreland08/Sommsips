@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Wines() {
+export default function AddWine() {
   return (
     <div>
       

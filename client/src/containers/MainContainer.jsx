@@ -1,15 +1,17 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
-import Home from '../Home/Home'
-  
+import Wines from '../screens/Wines';
+import { getAllWines } from '../services/wines'
+
 export default function MainContainer() {
   return (
     <div>
-      <Switch>
-      <Route path='/'>
-    <Home />
+      <h1>Main Container</h1>
+      <Route path='/wines'>
+          <Wines
+            allWines={getAllWines}
+          />
         </Route>
-        </Switch>
     </div>
   )
 }
