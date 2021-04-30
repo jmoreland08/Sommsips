@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from "react";
-import {postWine} from '../../services/wines'
-
-export default function AddWine() {
+import { postWine } from '../../services/wines';
+import { useHistory } from 'react-router-dom';
+export default function AddWine({allWines, setAllWines}) {
+  
   const [formData, setFormData] = useState({
     name: "",
     img_url: "",
@@ -10,6 +11,9 @@ export default function AddWine() {
     varietal: "",
     user_id: ""
   });
+  
+  const history = useHistory()
+
   const { name, img_url, vintage, varietal, user_id} = formData;
 
   const handleChange = (e) => {
@@ -21,7 +25,13 @@ export default function AddWine() {
     }));
   };
 
-
+  const updateWines = () => {
+    setAllWines(prevState => ([
+      ...prevState,
+      formData  
+    ]))
+    history.push('/wines')
+  } 
 
   return (
     <div>
@@ -30,6 +40,7 @@ export default function AddWine() {
         onSubmit={(e) => {
           e.preventDefault();
           postWine(formData);
+          updateWines()
         }}
       >
         <h3>Add a Wine</h3>

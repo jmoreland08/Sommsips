@@ -26,10 +26,8 @@ function App() {
   const handleDelete = async (id) => {
     await deleteWine(id)
     const updatedWines = allWines.filter(wine => {
-      console.log(wine.id,id)
       return wine.id !== id
     })
-    console.log(updatedWines)
     setAllWines(updatedWines)
     history.push('/wines')
   };
@@ -42,7 +40,10 @@ function App() {
       
 
         <Route  exact path="/wines/add">
-        <AddWine />
+          <AddWine 
+            allWines={allWines}
+            setAllWines={setAllWines}
+          />
         </Route>
 
         <Route  exact path="/wines/:id/edit">

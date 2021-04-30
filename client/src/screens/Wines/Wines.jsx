@@ -33,6 +33,6 @@ export default function Wines({allWines}) {
           </React.Fragment>
         ))}
     </div>
-    </Layout>
+     </Layout>
   )
 }
