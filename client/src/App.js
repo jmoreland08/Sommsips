@@ -1,36 +1,47 @@
-import "./App.css";
-// import MainContainer from './containers/MainContainer';
+import './App.css';
 import { Switch, Route } from "react-router-dom";
-import Layout from "./layouts/Layout";
-import Wines from "./screens/Wines";
-import WineDetail from "./screens/WineDetail";
-import AddWine from './screens/AddWine'
-import WineEdit from "./screens/WineEdit";
-// import { wines } from '../src/services/wines'
+import Wines from './screens/Wines/Wines';
+import Home from './screens/Home/Home';
+import Details from './screens/Details/Details';
+import AddWine from './screens/AddWine/AddWine';
+import EditWine from './screens/EditWine/EditWine';
+import Layout from './components/Layout/Layout';
 
-function App(props) {
-  const { postWine } = props;
+
+function App() {
   return (
+    
     <div className="App">
-      <Layout></Layout>
-
-      <Route  path="/wines/id">
-        <WineDetail />
-      </Route>
       
-      <Route path='/wines/edit'>
-        <WineEdit />
-      </Route>
+      <Switch>
+      
 
-      <Route path='/wines/add-wine'>
-        <AddWine postWine={postWine}/>
-     </Route>
+        <Route  exact path="/wines/add">
+        <AddWine />
+        </Route>
 
-      <Route exact path="/wines">
+        <Route  exact path="/wines/edit">
+        <EditWine />
+        </Route>
+
+        <Route  exact path="/wines/:id">
+          <Details />
+        </Route>
+
+        <Route  exact path="/wines">
         <Wines />
-      </Route>
+        </Route>
 
-    </div>
+        <Route  exact path="/">
+        <Home />
+        </Route>
+
+
+
+        </Switch>
+        
+      </div>
+      
   );
 }
 

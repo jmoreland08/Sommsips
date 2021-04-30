@@ -1,10 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-// import Card from '../components/Card/Card';
-import Card from "../Card/Card";
-import Layout from "../layouts/Layout";
+import React from 'react'
 import { useState, useEffect } from "react";
-import { getAllWines } from "../services/wines";
+import { Link } from 'react-router-dom';
+import Card from '../../components/Layout/Card/Card';
+import { getAllWines } from "../../services/wines";
 
 export default function Wines() {
   const [allWines, setAllWines] = useState([]);
@@ -17,12 +15,9 @@ export default function Wines() {
     const wines = await getAllWines();
     setAllWines(wines);
   };
- 
   return (
-      
-    <div className="card-list">
-  
-        <h1>wines</h1>
+    <div>
+      <h1>Wines</h1>
         {allWines.map((wine) => (
           <React.Fragment key={wine.id}>
             <Link to={`/wines/${wine.id}`}>
@@ -35,12 +30,6 @@ export default function Wines() {
             </Link>
           </React.Fragment>
         ))}
-
-        <Link to="/wines/new">
-          <button>Add a Wine</button>
-        </Link>
-      
-    </div >
-   
-  );
+    </div>
+  )
 }

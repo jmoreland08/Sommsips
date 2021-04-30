@@ -1,4 +1,4 @@
-import api from "./api.helper";
+import api from "./api-helper";
 
 
 
@@ -12,10 +12,10 @@ export const getOneWine = async (id) => {
   return resp.data;
 }
 
-// export const postWine = async (wineData) => {
-//   const resp = await api.post('/wines', { wine: wineData });
-//   return resp.data;
-// }
+export const postWine = async (wineData) => {
+  const resp = await api.post('/wines', { wine: wineData });
+  return resp.data;
+}
 
 export const putWine = async (id, wineData) => {
   const resp = await api.put(`/wines/${id}`, { wine: wineData });

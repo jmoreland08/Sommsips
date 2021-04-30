@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react'
 import { useState } from "react";
-import api from '../services/api.helper'
-// import { postWine } from '../services/wines'
+import {postWine} from '../../services/wines'
 
-export default function AddWine() {
+export default function AddWine(props) {
   const [formData, setFormData] = useState({
     name: "",
     img_url: "",
@@ -12,20 +11,20 @@ export default function AddWine() {
   });
   const { name, img_url, vintage, varietal } = formData;
 
-  const postWine = async (wineData) => {
-    const resp = await api.post('/wines', { wine: wineData });
-    return resp.data;
-  }
+  const { postWine } = props;
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
+
+
   return (
-    <div className="form-container">
+    <div>
+      <h1>Add Wine</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -74,5 +73,5 @@ export default function AddWine() {
         <button>Submit</button>
       </form>
     </div>
-  );
+  )
 }
