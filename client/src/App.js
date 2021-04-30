@@ -1,14 +1,39 @@
 import './App.css';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import Wines from './screens/Wines/Wines';
 import Home from './screens/Home/Home';
 import Details from './screens/Details/Details';
 import AddWine from './screens/AddWine/AddWine';
 import EditWine from './screens/EditWine/EditWine';
-import Layout from './components/Layout/Layout';
+import { getAllWines, deleteWine } from './services/wines'
+import {useState, useEffect} from 'react'
+// import Layout from './components/Layout/Layout';
 
 
 function App() {
+  const [allWines, setAllWines] = useState([])
+  const history = useHistory()
+
+  useEffect(() => {
+    fetchWines();
+  }, []);
+
+  const fetchWines = async () => {
+    const wines = await getAllWines();
+    setAllWines(wines);
+  };
+
+  const handleDelete = async (id) => {
+    await deleteWine(id)
+    const updatedWines = allWines.filter(wine => {
+      console.log(wine.id,id)
+      return wine.id !== id
+    })
+    console.log(updatedWines)
+    setAllWines(updatedWines)
+    history.push('/wines')
+  };
+
   return (
     
     <div className="App">
@@ -20,16 +45,19 @@ function App() {
         <AddWine />
         </Route>
 
-        <Route  exact path="/wines/edit">
-        <EditWine />
+        <Route  exact path="/wines/:id/edit">
+          <EditWine
+            allWines={allWines}
+            setAllWines={setAllWines}
+          />
         </Route>
 
         <Route  exact path="/wines/:id">
-          <Details />
+          <Details handleDelete={handleDelete}/>
         </Route>
 
         <Route  exact path="/wines">
-        <Wines />
+        <Wines allWines={allWines} />
         </Route>
 
         <Route  exact path="/">

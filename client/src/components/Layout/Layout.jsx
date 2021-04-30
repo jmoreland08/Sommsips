@@ -1,9 +1,23 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 
 export default function Layout() {
   return (
     <div>
-      <h1>Layout</h1>
+      <NavLink className="logo" to="/">
+        Sommsips
+      </NavLink>
+<br/>
+      <NavLink className="wines" to="/wines">
+        View all Wines
+      </NavLink>
+      <br/>
+      <NavLink className="wines" to="/wines/add">
+        Add a Wine
+      </NavLink>
+      <br/>
+    
+
     </div>
   )
 }
