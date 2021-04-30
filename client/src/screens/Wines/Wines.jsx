@@ -23,7 +23,7 @@ export default function Wines() {
             <Link to={`/wines/${wine.id}`}>
               <Card
                 name={wine.name}
-                image={wine.img_url}
+                imgUrl={wine.img_url}
                 vintage={wine.vintage}
                 varietal={wine.varietal}
               />
