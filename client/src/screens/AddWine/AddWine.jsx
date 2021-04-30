@@ -2,21 +2,22 @@ import React from 'react'
 import { useState } from "react";
 import {postWine} from '../../services/wines'
 
-export default function AddWine(props) {
+export default function AddWine() {
   const [formData, setFormData] = useState({
     name: "",
     img_url: "",
     vintage: "",
-    varietal: ""
+    varietal: "",
+    user_id: ""
   });
-  const { name, img_url, vintage, varietal } = formData;
+  const { name, img_url, vintage, varietal, user_id} = formData;
 
-  const { postWine } = props;
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: name === "user_id" ? Number(value) : value,
+      
     }));
   };
 
@@ -69,7 +70,16 @@ export default function AddWine(props) {
             onChange={handleChange}
           />
         </label>
-        <br/>
+        <br />
+        <label>
+          User Id:
+          <input
+            type="number"
+            name="user_id"
+            value={user_id}
+            onChange={handleChange}
+          />
+        </label>
         <button>Submit</button>
       </form>
     </div>

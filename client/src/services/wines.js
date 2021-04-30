@@ -14,6 +14,7 @@ export const getOneWine = async (id) => {
 }
 
 export const postWine = async (wineData) => {
+  console.log(wineData)
   const resp = await api.post('/wines', { wine: wineData });
   return resp.data;
 }

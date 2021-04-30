@@ -15,7 +15,8 @@ class WinesController < ApplicationController
   # POST /wines
   def create
     @wine = Wine.new(wine_params)
-
+    print "WINE!!!"
+    print @wine
     if @wine.save
       render json: @wine, status: :created, location: @wine
     else
@@ -45,6 +46,6 @@ class WinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wine_params
-      params.require(:wine).permit(:name, :vintage, :varietal, :img_url, :user_id)
+      params.require(:wine).permit(:name, :img_url, :vintage, :varietal,  :user_id)
     end
 end
