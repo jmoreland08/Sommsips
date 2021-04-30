@@ -3,15 +3,8 @@ class WinesController < ApplicationController
 
   # GET /wines
   def index
-    if params[:user_id]
-      @user = User.find(params[:user_id])
-  
-    render json: @user, include: :wines
-    else
-      @wines = Wine.all
-  
-      render json: @wines
-    end
+    @wines = Wine.all  
+    render json: @wines    
   end
 
   # GET /wines/1
