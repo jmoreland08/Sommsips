@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from 'react-router-dom';
 import {putWine} from '../../services/wines'
-// import { putWine } from "../../services/wines";
+import Layout from '../../components/Layout/Layout'
 
 
 export default function EditWine({allWines, setAllWines}) {
@@ -55,7 +55,8 @@ export default function EditWine({allWines, setAllWines}) {
   
 
 
-    return (
+  return (
+      <Layout>
       <div>
         <form
           onSubmit={(e) => {
@@ -115,6 +116,7 @@ export default function EditWine({allWines, setAllWines}) {
           <input type='submit' value='submit'/>
         </form>
       </div>
+      </Layout>
     )
   
 }

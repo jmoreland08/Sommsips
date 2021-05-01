@@ -1,0 +1,24 @@
+.add-wine {
+  margin-top: 125px;
+  display: flexbox;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+#add-form {
+  display: flexbox;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #813772;
+  height: 350px;
+  width: 200px;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 0 auto;
+
+}
+
+.label {
+  padding: 20px;
+}

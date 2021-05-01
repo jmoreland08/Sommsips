@@ -2,8 +2,10 @@ import React from 'react'
 import { useState } from "react";
 import { postWine } from '../../services/wines';
 import { useHistory } from 'react-router-dom';
+import Layout from '../../components/Layout/Layout' 
+import './AddWine.css'
+
 export default function AddWine({allWines, setAllWines}) {
-  
   const [formData, setFormData] = useState({
     name: "",
     img_url: "",
@@ -34,9 +36,9 @@ export default function AddWine({allWines, setAllWines}) {
   } 
 
   return (
-    <div>
-      <h1>Add Wine</h1>
-      <form
+    <Layout>
+    <div className='add-wine'>
+      <form id= 'add-form'
         onSubmit={(e) => {
           e.preventDefault();
           postWine(formData);
@@ -44,7 +46,7 @@ export default function AddWine({allWines, setAllWines}) {
         }}
       >
         <h3>Add a Wine</h3>
-        <label>
+        <label className='label'>
           Name:
           <input type="text"
             name="name"
@@ -52,7 +54,7 @@ export default function AddWine({allWines, setAllWines}) {
             onChange={handleChange} />
         </label>
 
-        <label>
+        <label className='label'>
           Image Url:
           <input
             type="text"
@@ -62,7 +64,7 @@ export default function AddWine({allWines, setAllWines}) {
           />
         </label>
 
-        <label>
+        <label className='label'>
           Vintage:
           <input
             type="text"
@@ -72,7 +74,7 @@ export default function AddWine({allWines, setAllWines}) {
           />
         </label>
 
-        <label>
+        <label className='label'>
           Varietal:
           <input
             type="text"
@@ -82,7 +84,7 @@ export default function AddWine({allWines, setAllWines}) {
           />
         </label>
         <br />
-        <label>
+        <label className='label'>
           User Id:
           <input
             type="number"
@@ -93,6 +95,7 @@ export default function AddWine({allWines, setAllWines}) {
         </label>
         <button>Submit</button>
       </form>
-    </div>
+      </div>
+      </Layout>
   )
 }
