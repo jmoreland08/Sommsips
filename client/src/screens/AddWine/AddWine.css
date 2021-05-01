@@ -1,24 +1,64 @@
 .add-wine {
-  margin-top: 125px;
-  display: flexbox;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  justify-content: center;
+  margin-top: 75px;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
 }
 
 #add-form {
-  display: flexbox;
+  display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #813772;
-  height: 350px;
-  width: 200px;
+  height: 400px;
+  width: 500px;
   justify-content: center;
   border-radius: 5px;
   margin: 0 auto;
+  
+ 
+
 
 }
 
-.label {
-  padding: 20px;
+
+
+.input {
+height: 25px;
+border-radius: 20px;
+width: 200px;
+margin: 0 auto;
+padding: 5px;
+font-weight: bolder;
+text-align: center;
+margin-top: 8px;
+margin-bottom: 8px;
+
 }
+
+.add-button {
+  width: 150px;
+  height: 25px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.select {
+  margin: 5px;
+  height: 35px;
+  width: 145px;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  }
+  .placerholder {
+    align-self: center;
+    font-weight: 700;
+  }
+
+  .form-header {
+    color: #ffdd77;
+    font-family: Big Caslon;
+    font-size: 30px;
+  }

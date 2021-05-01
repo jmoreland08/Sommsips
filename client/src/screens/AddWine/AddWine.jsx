@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from "react";
 import { postWine } from '../../services/wines';
+// import {getAllUsers } from '../../services/users';
 import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout/Layout' 
 import './AddWine.css'
 
-export default function AddWine({allWines, setAllWines}) {
+export default function AddWine({allWines, setAllWines, allUsers}) {
   const [formData, setFormData] = useState({
     name: "",
     img_url: "",
@@ -45,55 +46,63 @@ export default function AddWine({allWines, setAllWines}) {
           updateWines()
         }}
       >
-        <h3>Add a Wine</h3>
-        <label className='label'>
-          Name:
-          <input type="text"
-            name="name"
-            value={name}
-            onChange={handleChange} />
-        </label>
-
-        <label className='label'>
-          Image Url:
-          <input
+        <h3 className='form-header'>Add a Wine</h3>
+    
+          
+          <input 
+            className='input'
             type="text"
-            name="img_url"
+            name="name"
+              value={name}
+              placeholder='Name'
+            onChange={handleChange} />
+       
+            
+          <input
+            className='input'
+            type="text"
+              name="img_url"
+              placeholder='Image Url'
             value={img_url}
             onChange={handleChange}
           />
-        </label>
-
-        <label className='label'>
-          Vintage:
+       
           <input
+            className='input'
             type="text"
-            name="vintage"
+              name="vintage"
+              placeholder='Vintage'
             value={vintage}
             onChange={handleChange}
           />
-        </label>
 
-        <label className='label'>
-          Varietal:
+           
           <input
+            className='input'
             type="text"
-            name="varietal"
+              name="varietal"
+              placeholder='Varietal'
             value={varietal}
             onChange={handleChange}
           />
-        </label>
-        <br />
-        <label className='label'>
-          User Id:
-          <input
-            type="number"
+       
+        
+          <select  className='dropdown'
+            className='select'
             name="user_id"
             value={user_id}
             onChange={handleChange}
-          />
-        </label>
-        <button>Submit</button>
+            >
+            {/* <option disable selected>
+              
+            </option> */}
+
+            {allUsers.map((user) => (
+              <option>{ user.name}</option>
+            ))}
+            </select>
+       
+        <button className='add-button'>Submit</button>
       </form>
       </div>
       </Layout>

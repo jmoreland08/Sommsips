@@ -4,7 +4,7 @@ import "./Nav.css";
 
 export default function Nav() {
   return (
-    <div>
+    <div id='navbar'>
       <NavLink className="logo" to="/">
         Sommsips
       </NavLink>

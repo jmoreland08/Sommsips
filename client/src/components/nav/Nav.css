@@ -1,4 +1,4 @@
-.navbar {
+#navbar {
   display: flex;
   flex-direction: row;
   background-color: #000000;
@@ -6,21 +6,27 @@
   border-style: solid;
   border-color: #707070;
   border-width: 1px;
-  justify-content: center;
+  justify-content: space-between;
   height: 75px;
   margin-bottom: 50px;
   color: #ffdd77;
   text-decoration: none;
+  width: 100%vw;
+
 
 }
 
 .wine-links {
   color: #ffdd77;
   text-decoration: none;
+  font-size: 30px;
+  align-content: flex-end;
+  margin-right: 15px;
 }
 
 .logo {
   color: #ffdd77;
   text-decoration: none;
-  justify-content: flex-start;
+  font-size: 50px;
+  margin-left: 15px;
 }
