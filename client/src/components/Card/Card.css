@@ -3,7 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: #813772;
+  background-color:#062f4f;
   margin-top: 100px;
   color: #ffdd77;
   text-decoration: none;
@@ -26,4 +26,21 @@ margin: 5px;
 
 .details{
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+.wine-card {
+  background-color: #813772;
+  
+}
+
+}
+@media (max-width: 380px){
+  .wine-card {
+  background-color: #813772;
+}
+
+.navbar {
+  background: #062f4f;
+}
 }

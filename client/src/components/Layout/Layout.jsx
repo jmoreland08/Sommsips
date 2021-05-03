@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import './Layout.css'
 import Nav from '../nav/Nav'
 export default function Layout(props) {

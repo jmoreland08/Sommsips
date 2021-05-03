@@ -59,16 +59,16 @@ export default function EditWine({allWines, setAllWines}) {
 
   return (
       <Layout>
-      <div className="add-wine">
+      <div className="edit-wine">
         <form
-          id="add-form"
+          id="edit-form"
           onSubmit={(e) => {
             e.preventDefault();
             updateWine(id, formData);
           }}
         >
           <h3 className="form-header">Edit a Wine</h3>
-          <label>
+         
            
           <input
               className="input"
@@ -76,9 +76,9 @@ export default function EditWine({allWines, setAllWines}) {
               name="name"
               value={name}
               onChange={handleChange} />
-          </label>
+          
 
-          <label>
+         
             
             <input
               className="input"
@@ -87,9 +87,9 @@ export default function EditWine({allWines, setAllWines}) {
               value={img_url}
               onChange={handleChange}
             />
-          </label>
+         
 
-          <label>
+          
             
             <input
               className="input"
@@ -98,9 +98,7 @@ export default function EditWine({allWines, setAllWines}) {
               value={vintage}
               onChange={handleChange}
             />
-          </label>
-
-          <label>
+        
            
             <input
               className="input"
@@ -109,9 +107,7 @@ export default function EditWine({allWines, setAllWines}) {
               value={varietal}
               onChange={handleChange}
             />
-          </label>
-          <br />
-          <label>
+         
           <input
               className="input"
               type="number"
@@ -119,7 +115,7 @@ export default function EditWine({allWines, setAllWines}) {
               value={user_id}
               onChange={handleChange}
             />
-          </label>
+          
           <button className="edit-button">Submit</button>
         </form>
       </div>

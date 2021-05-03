@@ -1,3 +1,44 @@
+.edit-wine {
+  margin-top: 75px;
+  
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
+}
+
+#edit-form {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color:#062f4f;
+  height: 400px;
+  width: 500px;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  
+ 
+
+
+}
+
+
+
+.input {
+height: 25px;
+border-radius: 20px;
+width: 200px;
+margin: 0 auto;
+padding: 5px;
+font-weight: bolder;
+text-align: center;
+margin-top: 8px;
+margin-bottom: 8px;
+
+}
+
 .edit-button {
   width: 150px;
   height: 25px;

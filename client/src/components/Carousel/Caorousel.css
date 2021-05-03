@@ -1,14 +1,77 @@
 
 .carousel {
-  /* margin-top: 300px;
-  height: 400px; */
+  margin: 0 auto;
+  text-decoration: none;
+  background-color:#062f4f;
+  color: #ffdd77;
+  border: 3px;
+  border-style: groove;
+  border-color:  #ffdd77;
+  width: 600px;
+  height: 375px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  
+
+}
+
+.car-div {
+  height:1000px;
+  
+
 }
 .slider {
-  height: 200px;
-  width: 400px;
+ 
+  text-decoration: none;
 }
 
 .d-block {
-  height: 150px;
+  height: 250px;
   width: 200px;
+  margin-top: 10px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+ 
+
 }
+
+#h1 {
+  text-decoration: none;
+  color: #ffdd77;
+}
+
+.back {
+margin-right: 150px;
+margin-bottom: 30px;
+border-radius: 20px;
+color:  #ffdd77;
+background-color: #813772;
+
+}
+
+.next {
+margin-left: 150px;
+border-radius: 20px;
+color: #ffdd77;
+background-color: #813772;
+} 
+.slideInner___2mfX9 carousel__inner-slide{
+  height: 50px;
+  padding: 0px;
+}
+
+@media (max-width: 768px) {
+  .carousel{
+    width: 300px;
+    height: 375px;
+  }
+  .back {
+    margin-right: 75px;
+  }
+  .next{
+    margin-left: 75px;
+  }
+
+  
+}
+@media (max-width: 380px){}

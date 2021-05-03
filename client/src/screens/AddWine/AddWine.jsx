@@ -9,9 +9,9 @@ import "./AddWine.css";
 export default function AddWine({ allWines, setAllWines, allUsers }) {
   const [formData, setFormData] = useState({
     name: "",
-    img_url: "",
     vintage: "",
     varietal: "",
+    img_url: "",
     user_id: "",
   });
 
