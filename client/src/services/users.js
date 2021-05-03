@@ -4,7 +4,7 @@ import api from "./api-helper";
 
 export const getAllUsers = async () => {
   const resp = await api.get('/users');
-  console.log(resp.data)
+ 
   return resp.data;
 }
 

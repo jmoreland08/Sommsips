@@ -4,7 +4,6 @@ import api from "./api-helper";
 
 export const getAllWines = async () => {
   const resp = await api.get('/wines');
-  console.log(resp.data)
   return resp.data;
 }
 

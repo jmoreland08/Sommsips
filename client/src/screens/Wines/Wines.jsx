@@ -3,19 +3,9 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import Layout from '../../components/Layout/Layout';
-import { getAllWines } from "../../services/wines";
 
 export default function Wines({allWines}) {
-  // const [allWines, setAllWines] = useState([]);
 
-  // useEffect(() => {
-  //   fetchWines();
-  // }, []);
-
-  // const fetchWines = async () => {
-  //   const wines = await getAllWines();
-  //   setAllWines(wines);
-  // };
   return (
     <Layout>
     <div className='all-wines'>

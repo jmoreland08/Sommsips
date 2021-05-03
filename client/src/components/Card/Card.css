@@ -12,6 +12,7 @@
   border-width: 30px;
   margin-inline: 50px;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .card-image {
@@ -23,6 +24,6 @@ border:  #813772;
 margin: 5px;
 }
 
-.h1{
+.details{
   text-decoration: none;
 }

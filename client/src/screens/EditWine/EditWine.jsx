@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from 'react-router-dom';
-import {putWine} from '../../services/wines'
+import { putWine } from '../../services/wines'
 import Layout from '../../components/Layout/Layout'
+import './EditWine.css'
+// import { putWine } from "../../services/wines";
 
 
 export default function EditWine({allWines, setAllWines}) {
@@ -57,17 +59,19 @@ export default function EditWine({allWines, setAllWines}) {
 
   return (
       <Layout>
-      <div>
+      <div className="add-wine">
         <form
+          id="add-form"
           onSubmit={(e) => {
             e.preventDefault();
             updateWine(id, formData);
           }}
         >
-          <h3>edit a Wine</h3>
+          <h3 className="form-header">Edit a Wine</h3>
           <label>
-            Name:
+           
           <input
+              className="input"
               type="text"
               name="name"
               value={name}
@@ -75,8 +79,9 @@ export default function EditWine({allWines, setAllWines}) {
           </label>
 
           <label>
-            Image Url:
-          <input
+            
+            <input
+              className="input"
               type="text"
               name="img_url"
               value={img_url}
@@ -85,8 +90,9 @@ export default function EditWine({allWines, setAllWines}) {
           </label>
 
           <label>
-            Vintage:
-          <input
+            
+            <input
+              className="input"
               type="text"
               name="vintage"
               value={vintage}
@@ -95,8 +101,9 @@ export default function EditWine({allWines, setAllWines}) {
           </label>
 
           <label>
-            Varietal:
-          <input
+           
+            <input
+              className="input"
               type="text"
               name="varietal"
               value={varietal}
@@ -105,15 +112,15 @@ export default function EditWine({allWines, setAllWines}) {
           </label>
           <br />
           <label>
-            User Id:
           <input
+              className="input"
               type="number"
               name="user_id"
               value={user_id}
               onChange={handleChange}
             />
           </label>
-          <input type='submit' value='submit'/>
+          <button className="edit-button">Submit</button>
         </form>
       </div>
       </Layout>
